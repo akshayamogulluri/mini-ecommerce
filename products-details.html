@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Specifications - ShopEase</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">
+            <a href="index.html" style="text-decoration:none; color:inherit;">🛍️ ShopEase</a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Electronics</a>
+            <a href="cart.html">Cart</a>
+            <a href="my-orders.html">My Orders</a>
+        </nav>
+    </header>
+
+    <!-- MAIN PRODUCT DETAILS -->
+    <main>
+        <div style="margin-bottom: 1.5rem;">
+            <a href="products.html" class="back-link">← Back to Electronics</a>
+        </div>
+
+        <!-- 2-COLUMN SIDE-BY-SIDE CONTAINER INJECTED BY JAVASCRIPT -->
+        <div id="productDetails">
+            <p class="loading-state">Loading device specifications...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 ShopEase Electronics. All rights reserved.</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/product-details.js"></script>
+</body>
+</html>

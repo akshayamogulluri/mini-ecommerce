@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Update Product</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Update Product</h1>
+    </header>
+
+    <main>
+
+        <form id="updateProductForm">
+
+            <select id="updateProductSelect" required>
+
+                <option value="">
+                    Select Product
+                </option>
+
+            </select>
+
+            <input type="text" id="updateProductName"
+                placeholder="Product Name" required>
+
+            <input type="number" id="updateProductPrice"
+                placeholder="Price" required>
+
+            <input type="text" id="updateProductCategory"
+                placeholder="Category" required>
+
+            <input type="text" id="updateProductImage"
+                placeholder="Image URL" required>
+
+            <input type="text" id="updateProductDescription"
+                placeholder="Description" required>
+
+            <input type="number" id="updateProductStock"
+                placeholder="Stock" required>
+
+            <input type="number" id="updateProductRating"
+                placeholder="Rating" step="0.1" required>
+
+            <button type="submit">
+                Update Product
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="admin.html">
+            Back to Admin Dashboard
+        </a>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="js/update-product.js"></script>
+
+</body>
+
+</html>

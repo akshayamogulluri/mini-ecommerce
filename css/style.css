@@ -1,0 +1,1051 @@
+/* ==========================================================================
+   SHOPEASE ELECTRONICS - COMPLETE STYLESHEET
+   A modern, clean, NovaTrend-inspired e-commerce UI
+   ========================================================================== */
+
+/* 1. GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* 2. DESIGN TOKENS / CSS VARIABLES */
+:root {
+    --primary: #7B2BFF;
+    --primary-hover: #651bd9;
+    --primary-light: #f3ebff;
+    --primary-dark: #4a0c8b;
+    --accent: #ff4757;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --bg-main: #f8f9fa;
+    --surface: #ffffff;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --transition: all 0.25s ease;
+}
+
+/* 3. RESET & BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 1280px;
+    width: 90%;
+    margin: 2rem auto;
+    flex: 1;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* 4. NAVBAR & HEADER */
+header, .navbar {
+    background-color: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo, header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    position: relative;
+    padding: 4px 0;
+}
+
+nav a:hover, nav a.active {
+    color: var(--primary);
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+    border-radius: 2px;
+}
+
+#logoutButton {
+    background-color: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    padding: 7px 16px;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#logoutButton:hover {
+    background-color: #fee2e2;
+    color: #ef4444;
+    border-color: #fca5a5;
+}
+
+/* 5. HOMEPAGE HERO & BENEFITS */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.5rem;
+    padding: 3rem 0;
+}
+
+.hero-content {
+    flex: 1.1;
+}
+
+.hero-tag, .small-heading {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.hero-content h1 {
+    font-size: 2.85rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 520px;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 14px rgba(123, 43, 255, 0.25);
+}
+
+.hero-button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(123, 43, 255, 0.35);
+}
+
+.hero-image {
+    flex: 0.9;
+    max-width: 550px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 3.5rem 0 2rem 0;
+}
+
+.benefit-card {
+    background: var(--surface);
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: #d1d5db;
+}
+
+.benefit-icon {
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: var(--text-primary);
+}
+
+.benefit-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* 6. PRODUCTS CATALOG & CONTROLS */
+.products-header {
+    margin-bottom: 2rem;
+}
+
+.products-header h2 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+.controls-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    background-color: var(--surface);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+}
+
+.search-container {
+    flex: 1;
+    min-width: 250px;
+}
+
+.search-container input, #searchInput {
+    width: 100%;
+    padding: 11px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: #fcfcfd;
+    transition: var(--transition);
+}
+
+.search-container input:focus, #searchInput:focus {
+    border-color: var(--primary);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.filter-sort-container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-sort-container select {
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.9rem;
+    background-color: var(--surface);
+    color: var(--text-primary);
+    cursor: pointer;
+    outline: none;
+    transition: var(--transition);
+}
+
+.filter-sort-container select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+/* 7. PRODUCTS GRID & PRODUCT CARDS */
+#productsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.75rem;
+    margin-top: 1.5rem;
+}
+
+.product-card {
+    background-color: var(--surface);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: #d1d5db;
+}
+
+.product-image-wrap {
+    width: 100%;
+    height: 230px;
+    background-color: #f3f4f6;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-card-image {
+    transform: scale(1.06);
+}
+
+.category-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(4px);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.product-card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.8rem;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+}
+
+.stars {
+    color: var(--warning);
+    letter-spacing: 1px;
+}
+
+.rating-value {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.product-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.product-buttons button {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.details-btn {
+    background-color: var(--primary-light);
+    color: var(--primary);
+    border: none;
+}
+
+.details-btn:hover {
+    background-color: #e6d3ff;
+}
+
+.add-to-cart-btn {
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* 8. PRODUCT DETAILS (SIDE-BY-SIDE PRESENTATION) */
+.details-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    background-color: var(--surface);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.details-image-container {
+    width: 100%;
+    height: 420px;
+    background-color: #f9fafb;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+}
+
+.details-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+.details-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.details-category {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.details-info h2 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.details-price {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0.75rem 0;
+}
+
+.details-desc {
+    color: var(--text-secondary);
+    margin: 1rem 0 1.5rem 0;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.stock-tag {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--success);
+    margin-bottom: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.details-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.details-actions button, .details-actions a {
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.btn-add-cart {
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    flex: 1.5;
+}
+
+.btn-add-cart:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-back {
+    background-color: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    flex: 1;
+}
+
+.btn-back:hover {
+    background-color: #f3f4f6;
+    color: var(--text-primary);
+}
+
+/* 9. CART & SUMMARY */
+.cart-table-wrapper {
+    background-color: var(--surface);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+    gap: 1.25rem;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+}
+
+.cart-item-details {
+    flex: 2;
+}
+
+.cart-item-details h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.cart-item-details p {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.cart-qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-qty-btn {
+    background-color: #f3f4f6;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.cart-qty-btn:hover {
+    background-color: #e5e7eb;
+}
+
+.cart-remove-btn {
+    background-color: transparent;
+    color: var(--accent);
+    border: none;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 4px 8px;
+    transition: var(--transition);
+}
+
+.cart-remove-btn:hover {
+    text-decoration: underline;
+}
+
+.cart-summary {
+    margin-top: 1.75rem;
+    background-color: var(--surface);
+    padding: 1.75rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-summary h2, #totalPrice {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+#checkoutButton, .btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#checkoutButton:hover, .btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* 10. CHECKOUT FORM */
+.checkout-form-container {
+    background-color: var(--surface);
+    max-width: 600px;
+    margin: 1.5rem auto;
+    padding: 2.25rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+}
+
+.form-group input, .form-group textarea, #checkoutForm input, #checkoutForm textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input:focus, .form-group textarea:focus, #checkoutForm input:focus, #checkoutForm textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+#checkoutForm button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+
+#checkoutForm button[type="submit"]:hover {
+    background-color: var(--primary-hover);
+}
+
+/* 11. AUTHENTICATION PAGES (LOGIN & REGISTER SPLIT CARDS) */
+.login-page, .register-page {
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+.login-container, .register-container {
+    background-color: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    border: 1px solid var(--border);
+}
+
+.login-welcome, .register-welcome {
+    background: linear-gradient(135deg, #7B2BFF 0%, #4a0c8b 100%);
+    color: #ffffff;
+    padding: 3rem 2.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.login-logo, .register-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.login-welcome h1, .register-welcome h1 {
+    font-size: 2.2rem;
+    margin: 1.5rem 0 0.5rem 0;
+    color: #ffffff;
+}
+
+.login-welcome p, .register-welcome p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+}
+
+.login-illustration, .register-illustration {
+    font-size: 3rem;
+    margin: 1.5rem 0;
+}
+
+.login-form-section, .register-form-section {
+    padding: 3rem 2.5rem;
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form-section h2, .register-form-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.form-subtitle, .register-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.login-form-section label, .register-form-section label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0.75rem 0 0.25rem 0;
+}
+
+.login-form-section input, .register-form-section input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.login-form-section input:focus, .register-form-section input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.login-button, .register-button {
+    width: 100%;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: var(--transition);
+}
+
+.login-button:hover, .register-button:hover {
+    background-color: var(--primary-hover);
+}
+
+.register-link, .login-link {
+    text-align: center;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-top: 1.5rem;
+}
+
+.register-link a, .login-link a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* 12. ORDERS PAGE */
+#myOrdersContainer, #ordersContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.order-card {
+    background-color: var(--surface);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.order-id {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.order-status {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* 13. ADMIN DASHBOARD & CRUD FORMS */
+#productForm, #updateProductForm {
+    background-color: var(--surface);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+#productForm input, #updateProductForm input, #updateProductSelect {
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+#productForm button, #updateProductForm button {
+    padding: 12px;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#productForm button:hover, #updateProductForm button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* 14. FOOTER */
+footer {
+    text-align: center;
+    padding: 1.75rem;
+    background-color: var(--surface);
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    margin-top: auto;
+}
+
+/* 15. RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .details-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero-content p {
+        margin: 0 auto 2rem auto;
+    }
+    
+    .hero-image {
+        max-width: 100%;
+    }
+    
+    .login-container, .register-container {
+        flex-direction: column;
+    }
+    
+    .login-welcome, .register-welcome {
+        padding: 2rem;
+    }
+    
+    .login-form-section, .register-form-section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    header, .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .controls-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-sort-container {
+        flex-direction: column;
+    }
+    
+    .cart-summary {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .details-actions {
+        flex-direction: column;
+    }
+}

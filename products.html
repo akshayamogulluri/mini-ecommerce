@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | ShopEase</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="products-page">
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <h1>🛍️ ShopEase</h1>
+            </a>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="cart.html">Cart <span id="cartCount"> </span> </a>
+            <a href="my-orders.html">My Orders</a>
+        </nav>
+
+        <button id="logoutButton">Logout</button>
+    </header>
+
+    <!-- Main Products View -->
+    <main>
+        <div class="products-header">
+            <h2>Explore Our Collection</h2>
+            <p class="section-subtitle">Find premium tech, fashion, and lifestyle essentials curated for you.</p>
+
+            <!-- Search, Filter & Sort Bar -->
+            <div class="controls-container">
+                <div class="search-container">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="🔍 Search products by name or category..."
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div class="filter-sort-container">
+                    <select id="categoryFilter" aria-label="Filter by category">
+                        <option value="all">All Categories</option>
+                    </select>
+
+                    <select id="sortProducts" aria-label="Sort products">
+                        <option value="default">Sort by: Featured</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating-desc">Rating: Highest First</option>
+                        <option value="rating-asc">Rating: Lowest First</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Products Grid -->
+        <div id="productsContainer">
+            <!-- Injected by js/products.js -->
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 ShopEase. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/products.js"></script>
+    <script>
+        const logoutBtn = document.getElementById("logoutButton");
+        if (logoutBtn) {
+            logoutBtn.addEventListener("click", function () {
+                localStorage.removeItem("loggedInUser");
+                alert("Logged out successfully!");
+                window.location.href = "login.html";
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

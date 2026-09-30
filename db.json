@@ -1,0 +1,230 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple MacBook Air M2",
+      "price": 99,
+      "category": "Laptops",
+      "image": "images/macbook.jpg",
+      "description": "Supercharged by the M2 chip. 13.6-inch Liquid Retina display, 8GB unified memory, 256GB SSD storage, and up to 18 hours of battery life.",
+      "stock": 12,
+      "rating": 4.9
+    },
+    {
+      "id": 3,
+      "name": "Samsung Galaxy S24 Ultra",
+      "price": 124999,
+      "category": "Smartphones",
+      "image": "images/s24-ultra.jpg",
+      "description": "Galaxy AI powered smartphone with 200MP camera, built-in S Pen, Titanium frame, and Snapdragon 8 Gen 3 processor.",
+      "stock": 15,
+      "rating": 4.7
+    },
+    {
+      "id": 4,
+      "name": "Apple Watch Series 9",
+      "price": 41900,
+      "category": "Wearables",
+      "image": "images/apple-watch.jpg",
+      "description": "Smarter, brighter, and mightier. Featuring the S9 SiP chip, double tap gesture control, and advanced health sensors.",
+      "stock": 25,
+      "rating": 4.6
+    },
+    {
+      "id": 5,
+      "name": "Sony PlayStation 5 Console",
+      "price": 54990,
+      "category": "Gaming",
+      "image": "images/ps5.jpg",
+      "description": "Next-gen gaming with ultra-high speed SSD, ray tracing, haptic feedback, and 3D Audio technology.",
+      "stock": 8,
+      "rating": 4.9
+    },
+    {
+      "id": 6,
+      "name": "Logitech MX Master 3S Mouse",
+      "price": 9495,
+      "category": "Accessories",
+      "image": "images/logitech-mouse.jpg",
+      "description": "Performance wireless mouse with 8K DPI sensor, Quiet Clicks, and MagSpeed electromagnetic scrolling.",
+      "stock": 30,
+      "rating": 4.9
+    },
+    {
+      "id": 7,
+      "name": "Apple iPad Air (M2 Chip)",
+      "price": 59900,
+      "category": "Laptops",
+      "image": "images/ipad-air.jpg",
+      "description": "Fresh redesign featuring the Apple M2 chip, 11-inch Liquid Retina display, and landscape front camera.",
+      "stock": 14,
+      "rating": 4.8
+    },
+    {
+      "name": "earphones",
+      "price": 200,
+      "category": "plugs",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQmkjKfpTQu-PDyitAseLV4jVwwJzyKvD9iuLTP--83bwimwJKhyJ2pTsUTNnzh8hlJGhE4H0eoAW8vQAFoB7eKuvune5yPZwWrV358Jp4idx2-F6SodPfjRQ",
+      "description": "earplugs",
+      "stock": 34,
+      "rating": 3.9,
+      "id": 8
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Store Administrator",
+      "email": "admin@shopease.com",
+      "password": "admin123",
+      "mobile": "9999999999",
+      "role": "admin"
+    },
+    {
+      "name": "Akki",
+      "email": "akshayamogulluri@gmail.com",
+      "password": "Akshaya2007@",
+      "mobile": "9550192789",
+      "role": "customer",
+      "id": 2
+    },
+    {
+      "name": "vennela",
+      "email": "vennela@gmail.com",
+      "password": "123456@N",
+      "mobile": "0000000000",
+      "role": "customer",
+      "id": 3
+    },
+    {
+      "name": "karishma",
+      "email": "karishma@gmail.com",
+      "password": "000000",
+      "mobile": "2424242424",
+      "role": "customer",
+      "id": 4
+    },
+    {
+      "name": "karishma",
+      "email": "karishm@gmail.com",
+      "password": "000000",
+      "mobile": "8989898989",
+      "role": "customer",
+      "id": 5
+    }
+  ],
+  "orders": [
+    {
+      "userId": 2,
+      "userEmail": "akshayamogulluri@gmail.com",
+      "customer": {
+        "name": "Akki",
+        "mobile": "8075247899",
+        "address": "Guntur , Andhrapradesh",
+        "city": "guntur",
+        "pincode": "522004"
+      },
+      "products": [
+        {
+          "id": 4,
+          "name": "Apple Watch Series 9",
+          "price": 41900,
+          "category": "Wearables",
+          "image": "images/apple-watch.jpg",
+          "description": "Smarter, brighter, and mightier. Featuring the S9 SiP chip, double tap gesture control, and advanced health sensors.",
+          "stock": 25,
+          "rating": 4.6,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 41900,
+      "status": "Pending",
+      "orderDate": "20/09/2026",
+      "id": 1
+    },
+    {
+      "userId": 3,
+      "userEmail": "vennela@gmail.com",
+      "customer": {
+        "name": "vennela",
+        "mobile": "0000000000",
+        "address": "aqdzsaf",
+        "city": "ponnur",
+        "pincode": "522124"
+      },
+      "products": [
+        {
+          "id": 2,
+          "name": "Sony WH-1000XM5 Wireless Headphones",
+          "price": 29990,
+          "category": "Audio",
+          "image": "images/sony-headphones.jpg",
+          "description": "Industry-leading noise cancellation with two processors and 8 microphones. Ultra-comfortable lightweight design with 30-hour battery life.",
+          "stock": 20,
+          "rating": 4.8,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 29990,
+      "status": "Pending",
+      "orderDate": "20/09/2026",
+      "id": 2
+    },
+    {
+      "userId": 3,
+      "userEmail": "vennela@gmail.com",
+      "customer": {
+        "name": "vennela",
+        "mobile": "1234566677",
+        "address": "aqdzsaf",
+        "city": "ponnur",
+        "pincode": "522124"
+      },
+      "products": [
+        {
+          "id": 4,
+          "name": "Apple Watch Series 9",
+          "price": 41900,
+          "category": "Wearables",
+          "image": "images/apple-watch.jpg",
+          "description": "Smarter, brighter, and mightier. Featuring the S9 SiP chip, double tap gesture control, and advanced health sensors.",
+          "stock": 25,
+          "rating": 4.6,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 41900,
+      "status": "Pending",
+      "orderDate": "20/09/2026",
+      "id": 3
+    },
+    {
+      "userId": 4,
+      "userEmail": "karishma@gmail.com",
+      "customer": {
+        "name": "karishma",
+        "mobile": "9090909090",
+        "address": "faszf",
+        "city": "guntur",
+        "pincode": "524424"
+      },
+      "products": [
+        {
+          "id": 7,
+          "name": "Apple iPad Air (M2 Chip)",
+          "price": 59900,
+          "category": "Laptops",
+          "image": "images/ipad-air.jpg",
+          "description": "Fresh redesign featuring the Apple M2 chip, 11-inch Liquid Retina display, and landscape front camera.",
+          "stock": 14,
+          "rating": 4.8,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 59900,
+      "status": "Pending",
+      "orderDate": "20/09/2026",
+      "id": 4
+    }
+  ]
+}
