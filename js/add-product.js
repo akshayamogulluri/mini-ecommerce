@@ -1,5 +1,5 @@
 // js/add-product.js - Adds New Electronic Device to db.json
-const PRODUCTS_API = "http://localhost:3000/products";
+const PRODUCTS_API = "/products";
 
 document.addEventListener("DOMContentLoaded", () => {
     // Admin check

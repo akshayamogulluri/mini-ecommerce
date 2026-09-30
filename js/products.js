@@ -1,5 +1,5 @@
 // js/products.js - Product Catalog & User-Scoped Add to Cart
-const PRODUCTS_API = "http://localhost:3000/products";
+const PRODUCTS_API = "/products";
 
 let allProducts = [];
 

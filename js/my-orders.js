@@ -1,6 +1,6 @@
 // js/my-orders.js - Displays Current User's Orders
 
-const ORDERS_API = "http://localhost:3000/orders";
+const ORDERS_API = "/orders";
 
 document.addEventListener("DOMContentLoaded", async () => {
 

@@ -1,7 +1,7 @@
 // js/product-details.js
 // Dedicated script for rendering side-by-side product view
 
-const API_URL = "http://localhost:3000/products";
+const API_URL = "/products";
 const productDetails = document.getElementById("productDetails");
 
 // 1. Extract the product ID from URL query parameters (e.g. ?id=2)

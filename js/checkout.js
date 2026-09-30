@@ -1,5 +1,5 @@
 // js/checkout.js - Creates an Order Linked to Current User
-const ORDERS_API = "http://localhost:3000/orders";
+const ORDERS_API = "/orders";
 
 document.addEventListener("DOMContentLoaded", () => {
     const currentUser = requireAuth();

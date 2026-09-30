@@ -1,5 +1,5 @@
 // js/login.js - Validates Registered Users & Routes Roles
-const USERS_API = "http://localhost:3000/users";
+const USERS_API = "/users";
 
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.getElementById("loginForm");

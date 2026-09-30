@@ -1,7 +1,7 @@
 // js/admin-products.js
 // Admin can view and delete products
 
-const PRODUCTS_API = "http://localhost:3000/products";
+const PRODUCTS_API = "/products";
 
 document.addEventListener("DOMContentLoaded", async () => {
 

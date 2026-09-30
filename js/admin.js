@@ -1,6 +1,6 @@
 // js/admin.js - Displays All Orders for Admin
 
-const ORDERS_API = "http://localhost:3000/orders";
+const ORDERS_API = "/orders";
 
 document.addEventListener("DOMContentLoaded", async () => {
 

@@ -1,5 +1,5 @@
 // js/register.js - Handles New User Registration
-const USERS_API = "http://localhost:3000/users";
+const USERS_API = "/users";
 
 document.addEventListener("DOMContentLoaded", () => {
     const registerForm = document.getElementById("registerForm");
